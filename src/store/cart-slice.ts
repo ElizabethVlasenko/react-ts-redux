@@ -34,6 +34,7 @@ export const cartSlice = createSlice({
         });
       }
     },
+
     removeFromCart(state, action: PayloadAction<string>) {
       const itemIndex = state.items.findIndex(
         (item) => item.id === action.payload
@@ -47,3 +48,5 @@ export const cartSlice = createSlice({
     },
   },
 });
+
+export const { addToCart, removeFromCart } = cartSlice.actions;
